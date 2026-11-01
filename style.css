@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 190, 213, .55), transparent 28%),
+    radial-gradient(circle at 90% 90%, rgba(244, 180, 204, .45), transparent 30%),
+    #fff7fa;
+  color: #6f183b;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  width: min(94%, 480px);
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.screen {
+  width: 100%;
+  text-align: center;
+  display: none;
+  animation: enter .55s ease both;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(18px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sticker {
+  font-size: 82px;
+  margin-bottom: 8px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.big-emoji,
+.envelope {
+  font-size: 82px;
+  margin-bottom: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-9px) rotate(2deg); }
+}
+
+.tiny {
+  font-size: 13px;
+  color: #a04b69;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+h1, h2 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(48px, 13vw, 72px);
+  line-height: .98;
+  color: #7b173f;
+}
+
+h1 span,
+h2 span {
+  color: #d24d78;
+}
+
+h2 {
+  font-size: clamp(39px, 10vw, 54px);
+  line-height: 1.05;
+  margin-bottom: 14px;
+  color: #7b173f;
+}
+
+.subtitle,
+.letter-intro,
+.final-text {
+  color: #8e5369;
+  line-height: 1.7;
+  max-width: 370px;
+  margin: 18px auto 28px;
+  font-size: 14px;
+}
+
+.button-row {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  margin: 25px 0 12px;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  padding: 14px 27px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .25s ease;
+  box-shadow: 0 9px 25px rgba(121, 25, 64, .14);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.yes {
+  background: #8d1d48;
+  color: white;
+}
+
+.btn.yes:hover {
+  box-shadow: 0 12px 30px rgba(141, 29, 72, .28);
+}
+
+.btn.no {
+  background: white;
+  color: #8d1d48;
+  border: 1px solid #edbfd0;
+  position: relative;
+}
+
+.btn.wide {
+  min-width: 220px;
+}
+
+.tease {
+  height: 22px;
+  color: #c63f6e;
+  font-size: 12px;
+}
+
+.mini-link,
+.back-btn {
+  border: 0;
+  background: transparent;
+  color: #9d4565;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  color: #a05a73;
+  font-size: 12px;
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.question-card {
+  background: rgba(255,255,255,.8);
+  border: 1px solid #f0cbd8;
+  border-radius: 28px;
+  padding: 28px 20px 25px;
+  box-shadow: 0 18px 55px rgba(110, 28, 60, .11);
+  backdrop-filter: blur(8px);
+}
+
+.question-icon {
+  font-size: 50px;
+  margin-bottom: 7px;
+}
+
+.question-card h2 {
+  font-size: 31px;
+  margin-bottom: 22px;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+}
+
+.answer {
+  border: 1px solid #edc1d0;
+  background: #fff;
+  color: #7c2549;
+  border-radius: 15px;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .22s ease;
+}
+
+.answer:hover {
+  transform: scale(1.02);
+  background: #fff0f5;
+}
+
+.quiz-msg {
+  min-height: 20px;
+  margin-top: 13px;
+  color: #c73c6a;
+  font-size: 12px;
+}
+
+.back-btn {
+  text-decoration: none;
+}
+
+.letter-card {
+  text-align: left;
+  background: white;
+  border: 1px solid #efcad7;
+  border-radius: 24px;
+  padding: 25px 23px;
+  box-shadow: 0 16px 50px rgba(110, 28, 60, .10);
+  color: #75465a;
+  font-family: Georgia, serif;
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 20px 0 22px;
+}
+
+.letter-card p {
+  margin-bottom: 14px;
+}
+
+.signature {
+  text-align: right;
+  color: #8b204c;
+}
+
+.final-hearts {
+  font-size: 32px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+
+.teddy {
+  font-size: 105px;
+  margin: 12px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-hearts span {
+  position: fixed;
+  bottom: -40px;
+  color: rgba(198, 63, 110, .23);
+  font-size: 22px;
+  animation: rise 9s linear infinite;
+  z-index: 0;
+}
+
+.floating-hearts span:nth-child(1) { left: 7%; animation-delay: 0s; }
+.floating-hearts span:nth-child(2) { left: 18%; animation-delay: 2s; }
+.floating-hearts span:nth-child(3) { left: 31%; animation-delay: 5s; }
+.floating-hearts span:nth-child(4) { left: 45%; animation-delay: 1s; }
+.floating-hearts span:nth-child(5) { left: 58%; animation-delay: 4s; }
+.floating-hearts span:nth-child(6) { left: 70%; animation-delay: 6s; }
+.floating-hearts span:nth-child(7) { left: 81%; animation-delay: 3s; }
+.floating-hearts span:nth-child(8) { left: 91%; animation-delay: 7s; }
+.floating-hearts span:nth-child(9) { left: 38%; animation-delay: 8s; }
+.floating-hearts span:nth-child(10) { left: 64%; animation-delay: 2.5s; }
+
+@keyframes rise {
+  from { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: 1; }
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 25px 14px;
+  }
+
+  .sticker, .big-emoji, .envelope {
+    font-size: 68px;
+  }
+
+  .button-row {
+    gap: 9px;
+  }
+
+  .btn {
+    padding: 13px 22px;
+  }
+
+  .question-card {
+    padding: 24px 16px;
+  }
+}

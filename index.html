@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Question 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+    <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+  </div>
+
+  <main class="app">
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+      <div class="sticker">🧸💗</div>
+      <p class="tiny">A tiny question for you...</p>
+      <h1>You  Are <br><span>Not Angry Land Lord okk.</span> 💕</h1>
+      <p class="subtitle">I made this little corner of the internet just for you.</p>
+
+      <div class="button-row">
+        <button class="btn yes" onclick="sayYes()">YES 💗</button>
+        <button class="btn no" id="noBtn" onclick="moveNo()">NO 🙈</button>
+      </div>
+
+      <p id="tease" class="tease"></p>
+      <button class="mini-link" onclick="showScreen('quiz')">There is more... ✨</button>
+    </section>
+
+    <!-- YES -->
+    <section id="yesScreen" class="screen">
+      <div class="big-emoji">🥹💗</div>
+      <p class="tiny">I was secretly hoping for this...</p>
+      <h2>You said <span>YES!</span></h2>
+      <p class="letter-intro">
+        Okay, now that you've said yes, you have to pass a tiny little quiz. 😌
+      </p>
+      <button class="btn yes wide" onclick="showScreen('quiz')">LET'S GO ✨</button>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen">
+      <div class="quiz-top">
+        <span id="questionNo">Question 1 of 4</span>
+        <span>💗</span>
+      </div>
+
+      <div class="question-card">
+        <div class="question-icon">🧸</div>
+        <h2 id="question">Ready?</h2>
+        <div id="answers" class="answers"></div>
+        <p id="quizMsg" class="quiz-msg"></p>
+      </div>
+
+      <button class="back-btn" onclick="showScreen('home')">← Back</button>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" class="screen">
+      <div class="envelope">💌</div>
+      <p class="tiny">You made it to the end...</p>
+      <h2>A Letter <span>For You</span></h2>
+
+      <div class="letter-card">
+        <p>Dear You,</p>
+        <p>
+          I don't know exactly when you became this important to me,
+          but somehow you did. Your presence makes ordinary moments feel
+          a little softer and a little happier.
+        </p>
+        <p>
+          Ye specially apology ky liye the Imama bhai 
+          main ny prhai ko "*****" bola tha tumhn ni
+        </p>
+        <p class="signature">With lots of love, 💗<br><b>Your Person</b></p>
+      </div>
+
+      <button class="btn yes wide" onclick="showScreen('final')">One last thing 💕</button>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="screen">
+      <div class="final-hearts">💗 💕 💗</div>
+      <h1>Znana Mard Sorry</h1>
+      <p class="final-text">
+        This little website ends here,<br>
+        but hopefully our story doesn't. ✨
+      </p>
+      <div class="teddy">🧸</div>
+      <button class="mini-link" onclick="showScreen('home')">Replay ↻</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
